@@ -1,0 +1,19 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+.head {
+  padding: 2.5rem;
+  background-color: burlywood;
+}
+button {
+  border-radius: 0.3rem;
+  padding: 10px;
+  margin: 1vh 1vw 2vh 1vw;
+}
+.container {
+  max-width: 700px;
+  margin: 2rem auto;
+  min-height: 100vh;
+  border: 2px solid burlywood;
+}

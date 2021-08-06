@@ -1,0 +1,46 @@
+.question {
+  font-weight: bold;
+  font-size: 15px;
+  margin: auto;
+  padding-bottom: 1rem;
+}
+.box {
+  background-color: burlywood;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+  display: block;
+  border: 2px solid black;
+  padding: 1rem;
+}
+
+.options {
+  display: block;
+  margin: 1px 1px 0px;
+}
+
+.option {
+  padding-top: 1rem;
+  margin-left: 1rem;
+  font-weight: bold;
+}
+.inputDiv {
+  display: block;
+  margin: 2rem auto;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.outputDiv {
+  color: burlywood;
+  padding: 1rem;
+  display: inline;
+  font-size: 1.5rem;
+}
+
+.inputBtn {
+  border-radius: 0.3rem;
+  padding: 10px;
+  margin: 1vh 1vw 5vh 1vw;
+}
