@@ -25,20 +25,22 @@ export default function App() {
   }
   return (
     <div className="App">
-      <div className="head">
-        <h1>Trianglempics</h1>
+      <section className="container">
+        <div className="head">
+          <h1>Trianglempics</h1>
 
-        <button onClick={onClickHypotenuse}>Calculate Hypotenuse</button>
-        <button onClick={onClickArea}>Calculate Area of Triangle</button>
-        <button onClick={onClickCheck}>Check if Triangle ?</button>
-        <button onClick={onClickAngle}>
-          Find 3<sup>rd</sup>Angle
-        </button>
-        <button onClick={onClickQuiz}>Play Quiz</button>
-      </div>
-      <div className="container">
-        <div>{display}</div>
-      </div>
+          <button onClick={onClickHypotenuse}>Calculate Hypotenuse</button>
+          <button onClick={onClickArea}>Calculate Area of Triangle</button>
+          <button onClick={onClickCheck}>Check if Triangle ?</button>
+          <button onClick={onClickAngle}>
+            Find 3<sup>rd</sup>Angle
+          </button>
+          <button onClick={onClickQuiz}>Play Quiz</button>
+        </div>
+        <div className="containerIn">
+          <div>{display}</div>
+        </div>
+      </section>
     </div>
   );
 }
