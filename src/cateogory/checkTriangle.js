@@ -21,7 +21,7 @@ function Check() {
   }
   return (
     <section>
-      <h3>Enter three sides</h3>
+      <h3 className="head">Enter three sides</h3>
       <form onSubmit={checkTriangle}>
         <label>
           <input

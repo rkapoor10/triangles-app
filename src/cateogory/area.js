@@ -68,7 +68,7 @@ function Area() {
 
   return (
     <section>
-      <h3>Chooose an Option to continue</h3>
+      <h3 className="head">Chooose an Option to continue</h3>
       <form className="formStructure">
         <div>
           <label>

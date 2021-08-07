@@ -4,7 +4,7 @@
 }
 .head {
   padding: 2.5rem;
-  background-color: burlywood;
+  background-color: goldenrod;
 }
 button {
   border-radius: 0.3rem;
@@ -15,5 +15,5 @@ button {
   max-width: 700px;
   margin: 2rem auto;
   min-height: 100vh;
-  border: 2px solid burlywood;
+  border: 2px solid goldenrod;
 }

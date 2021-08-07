@@ -15,7 +15,7 @@ function FindAngle() {
   }
   return (
     <section>
-      <h3>
+      <h3 className="head">
         Enter the angles to find the 3<sup>rd</sup> angle
       </h3>
       <form onSubmit={onClickCalculate}>
