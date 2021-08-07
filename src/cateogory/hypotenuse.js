@@ -27,6 +27,7 @@ function Hypotenuse() {
         <input
           className="inputDiv"
           type="number"
+          min="1"
           placeholder="Enter height"
           onChange={(e) => {
             setHeight(e.target.value);
@@ -34,6 +35,7 @@ function Hypotenuse() {
         ></input>
         <input
           className="inputDiv"
+          min="1"
           type="number"
           placeholder="Enter base"
           onChange={(e) => {

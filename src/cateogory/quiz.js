@@ -42,7 +42,7 @@ const qna = [
   {
     queNo: "7",
     que:
-      "A triangle is having two sides 1.9cm, 1.9cm and angle between them is 30°, then it is a/an ____ triangle ? ",
+      "A triangle is having two sides 1.9cm, 1.9cm and angle between them is 60°, then it is a/an ____ triangle ? ",
     options: ["Equilateral", "Scalene", "Isosceles"],
     answer: "Equilateral"
   },
