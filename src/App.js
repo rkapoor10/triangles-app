@@ -41,6 +41,49 @@ export default function App() {
           <div>{display}</div>
         </div>
       </section>
+      <footer className="container">
+        <ul>
+          <li>
+            <a
+              target="_blank"
+              href="https://github.com/rkapoor10/triangles-app"
+            >
+              <img
+                src="https://img.icons8.com/ios-glyphs/30/000000/github.png"
+                alt=""
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/ritik-kapoor-493469196/"
+              target="blank"
+            >
+              <img
+                src="https://img.icons8.com/ios-filled/30/000000/linkedin.png"
+                alt=""
+              />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/ritikkapoor.10/" target="blank">
+              <img
+                src="https://img.icons8.com/ios-glyphs/30/000000/instagram-circle.png"
+                alt=""
+              />
+            </a>
+          </li>
+          <li>
+            <a href="https://ritikportfolio.netlify.app/" target="blank">
+              <img
+                src="https://img.icons8.com/ios-filled/30/000000/resume-website.png"
+                alt=""
+              />
+            </a>
+          </li>
+        </ul>
+        <p>About: Theme and Title dedicated to Neeraj Chopra 🇮🇳</p>
+      </footer>
     </div>
   );
 }
