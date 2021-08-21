@@ -21,7 +21,8 @@ function Check() {
   }
   return (
     <section>
-      <h3 className="head">Enter three sides</h3>
+      <h3 className="head">Enter three Angles of the Triangle</h3>
+      <p>Sum of angles should be 180°</p>
       <form onSubmit={checkTriangle}>
         <label>
           <input
