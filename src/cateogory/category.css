@@ -37,6 +37,11 @@
   padding: 1rem;
   display: inline;
   font-size: 1.5rem;
+  font-weight: bold;
+  border: solid 2px brown;
+  margin: 1rem;
+  box-shadow: 5px 5px 5px brown;
+  border-radius: 1rem;
 }
 
 .inputBtn {

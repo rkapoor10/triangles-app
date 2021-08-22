@@ -126,11 +126,14 @@ function Quiz() {
         <button type="submit">Submit</button>
       </form>
       <div style={{ display: `${resultDisplay}` }}>
-        <h1>SCORE: {score}</h1>
+        <h1 className="outputDiv" style={{ display: "block" }}>
+          SCORE: {score}
+        </h1>
         <button
           onClick={() => {
             window.location.reload(false);
           }}
+          style={{ margin: "auto", display: "block" }}
         >
           Back
         </button>

@@ -7,46 +7,18 @@ function Area() {
   const [optionOne, setOptionOne] = useState("none");
   const [optionTwo, setOptionTwo] = useState("none");
   const [optionThree, setOptionThree] = useState("none");
-  const [dimension1, setDimension1] = useState("0");
-  const [dimension2, setDimension2] = useState("0");
-  const [dimension3, setDimension3] = useState("0");
-
-  function caluclateAreaOp1(please) {
-    please.preventDefault();
-    const area = 0.5 * dimension1 * dimension2;
-    setAns(area);
-    setOutput("block");
-  }
-
-  function caluclateAreaOp2(please) {
-    please.preventDefault();
-    // if((dimension1+dimension2)>dimension3 && (dimension1+dimension3)>dimension2 && (dimension3+dimension2)>dimension1)
-    //{}
-    let s = dimension1 + dimension2 + dimension3;
-    s = s / 2;
-    console.log(s);
-    let a = s * (s - dimension1) * (s - dimension2) * (s - dimension3);
-    const area = Math.sqrt(a);
-    setAns(area.toFixed(3));
-    setOutput("block");
-
-    // else{
-    //   return(
-    //     <div style={{color:"red"}}>Enter valid sides i.e sum of any two sides of a triangle must be greater than third side</div>
-    //   );
-    // }
-  }
-  function caluclateAreaOp3(please) {
-    please.preventDefault();
-    let product = dimension1 * dimension2;
-    product = product / 2;
-    let a = product * Math.sin((dimension3 * Math.PI) / 180);
-    setAns(a.toFixed(3));
-    setOutput("block");
-  }
+  const [base, setBase] = useState(null);
+  const [height, setHeight] = useState(null);
+  const [sideOne, setSideOne] = useState(null);
+  const [sideTwo, setSideTwo] = useState(null);
+  const [sideThree, setSideThree] = useState(null);
+  const [edgeOne, setEdgeOne] = useState(null);
+  const [edgeTwo, setEdgeTwo] = useState(null);
+  const [angle, setAngle] = useState(null);
 
   function setDisplay(e) {
     setOutput("none");
+
     const option = e.target.value;
     console.log(option);
     if (option === "optionOne") {
@@ -64,6 +36,41 @@ function Area() {
       setOptionTwo("none");
       setOptionThree("block");
     }
+  }
+
+  function caluclateAreaOp1(please) {
+    please.preventDefault();
+    const area = 0.5 * base * height;
+    setAns(area);
+    setOutput("block");
+  }
+
+  function caluclateAreaOp2(please) {
+    please.preventDefault();
+    // if((dimension1+dimension2)>dimension3 && (dimension1+dimension3)>dimension2 && (dimension3+dimension2)>dimension1)
+    //{}
+    let s = sideOne + sideTwo + sideThree;
+    s = s / 2;
+    console.log(s);
+    let a = s * (s - sideOne) * (s - sideTwo) * (s - sideThree);
+    const area = Math.sqrt(a);
+    setAns(area.toFixed(3));
+    setOutput("block");
+
+    // else{
+    //   return(
+    //     <div style={{color:"red"}}>Enter valid sides i.e sum of any two sides of a triangle must be greater than third side</div>
+    //   );
+    // }
+  }
+  function caluclateAreaOp3(please) {
+    please.preventDefault();
+    let product = edgeOne * edgeTwo;
+    product = product / 2;
+    let a = product * Math.sin((angle * Math.PI) / 180);
+    setAns(a.toFixed(3));
+
+    setOutput("block");
   }
 
   return (
@@ -119,7 +126,7 @@ function Area() {
           <input
             required
             onChange={(e) => {
-              setDimension1(Number(e.target.value));
+              setBase(Number(e.target.value));
             }}
             className="inputDiv"
             type="Number"
@@ -129,7 +136,7 @@ function Area() {
           <input
             required
             onChange={(e) => {
-              setDimension2(Number(e.target.value));
+              setHeight(Number(e.target.value));
             }}
             className="inputDiv"
             type="Number"
@@ -137,6 +144,14 @@ function Area() {
             placeholder="Enter height"
           ></input>
           <button type="submit">Calculate</button>
+          <button
+            type="reset"
+            onClick={() => {
+              setOutput("none");
+            }}
+          >
+            Reset
+          </button>
         </form>
       </div>
 
@@ -146,7 +161,7 @@ function Area() {
           <input
             required
             onChange={(e) => {
-              setDimension1(Number(e.target.value));
+              setSideOne(Number(e.target.value));
             }}
             className="inputDiv"
             type="Number"
@@ -156,7 +171,7 @@ function Area() {
           <input
             required
             onChange={(e) => {
-              setDimension2(Number(e.target.value));
+              setSideTwo(Number(e.target.value));
             }}
             className="inputDiv"
             type="Number"
@@ -166,7 +181,7 @@ function Area() {
           <input
             required
             onChange={(e) => {
-              setDimension3(Number(e.target.value));
+              setSideThree(Number(e.target.value));
             }}
             className="inputDiv"
             type="Number"
@@ -174,6 +189,14 @@ function Area() {
             placeholder="Enter 3rd side"
           ></input>
           <button type="submit">Calculate</button>
+          <button
+            type="reset"
+            onClick={() => {
+              setOutput("none");
+            }}
+          >
+            Reset
+          </button>
         </form>
       </div>
 
@@ -183,7 +206,7 @@ function Area() {
           <input
             required
             onChange={(e) => {
-              setDimension1(Number(e.target.value));
+              setEdgeOne(Number(e.target.value));
             }}
             className="inputDiv"
             type="Number"
@@ -193,7 +216,7 @@ function Area() {
           <input
             required
             onChange={(e) => {
-              setDimension2(Number(e.target.value));
+              setEdgeTwo(Number(e.target.value));
             }}
             className="inputDiv"
             type="Number"
@@ -203,7 +226,7 @@ function Area() {
           <input
             required
             onChange={(e) => {
-              setDimension3(Number(e.target.value));
+              setAngle(Number(e.target.value));
             }}
             className="inputDiv"
             type="Number"
@@ -211,6 +234,14 @@ function Area() {
             placeholder="Enter enclosed angle"
           ></input>
           <button type="submit">Calculate</button>
+          <button
+            type="reset"
+            onClick={() => {
+              setOutput("none");
+            }}
+          >
+            Reset
+          </button>
         </form>
       </div>
       <p className="outputDiv" style={{ display: `${output}` }}>
